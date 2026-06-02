@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trivia Soyoda Wins — Día del Padre 2026</title>
+<meta name="description" content="¿Cuánto conoces las marcas que vende Soyoda? Responde la trivia, acumula boletos y participa en el sorteo del Día del Padre.">
+<meta property="og:title" content="🎁 Trivia Soyoda Wins — Día del Padre 2026">
+<meta property="og:description" content="¿Cuánto conoces nuestras marcas? Responde, gana boletos y participa en el sorteo. ¡Solo una participación por colaborador!">
+<meta property="og:image" content="https://placehold.co/1200x630/1F3864/C9A84C?text=Trivia+Soyoda+Wins+%F0%9F%8E%81%0ADia+del+Padre+2026&font=montserrat">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://placehold.co/1200x630/1F3864/C9A84C?text=Trivia+Soyoda+Wins+%F0%9F%8E%81%0ADia+del+Padre+2026&font=montserrat">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#1F3864;--navy2:#162a50;--gold:#C9A84C;--gold2:#e8c06a;
+  --green:#2d7a4f;--green-bg:#e8f5ee;--red:#b03030;--red-bg:#fdeaea;
+  --white:#ffffff;--off:#f4f6fa;--text:#1a2540;--muted:#6b7a99;
+  --radius:16px;--shadow:0 8px 40px rgba(31,56,100,0.13);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:#0f1e3d;min-height:100vh;color:var(--text);overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 20% 0%,rgba(201,168,76,0.18) 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 80% 100%,rgba(45,122,79,0.12) 0%,transparent 60%),radial-gradient(ellipse 100% 80% at 50% 50%,#0f1e3d 0%,#162a50 100%);z-index:0;pointer-events:none}
+.page-wrap{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:0 0 60px}
+/* HERO */
+.hero{width:100%;max-width:680px;padding:48px 24px 36px;text-align:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.35);border-radius:99px;padding:5px 16px;font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--gold2);text-transform:uppercase;margin-bottom:18px}
+.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,10vw,80px);letter-spacing:.03em;color:var(--white);line-height:.95;margin-bottom:8px}
+.hero-title span{color:var(--gold)}
+.hero-sub{font-size:16px;color:rgba(255,255,255,0.65);font-weight:400;line-height:1.6;margin-bottom:24px}
+.hero-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:8px}
+.badge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:99px;padding:5px 14px;font-size:12px;color:rgba(255,255,255,0.7);font-weight:500}
+/* SHELL */
+.card-shell{width:100%;max-width:640px;margin:0 auto;padding:0 16px}
+/* SCREENS */
+.screen{display:none}
+.screen.active{display:block;animation:fadeUp .35s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+/* REGISTRO */
+.reg-card{background:var(--white);border-radius:var(--radius);padding:32px 28px;box-shadow:var(--shadow)}
+.reg-card h2{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.04em;color:var(--navy);margin-bottom:6px}
+.reg-card p{font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.6}
+.test-banner{background:#fff8e1;border:1.5px solid #f0c040;border-radius:10px;padding:10px 14px;margin-bottom:14px;font-size:13px;color:#7a5800;display:flex;align-items:flex-start;gap:8px;line-height:1.5}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);margin-bottom:7px}
+.field input,.field select{width:100%;padding:12px 16px;border:1.5px solid #d4dae8;border-radius:10px;font-size:15px;font-family:'Outfit',sans-serif;color:var(--text);background:#fff;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
+.field input:focus,.field select:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(31,56,100,0.1)}
+.field input::placeholder{color:#b0b8cc}
+.btn-start{width:100%;padding:15px;background:linear-gradient(135deg,var(--navy) 0%,#2d4f8a 100%);color:var(--white);border:none;border-radius:12px;font-family:'Outfit',sans-serif;font-size:16px;font-weight:600;cursor:pointer;letter-spacing:.03em;transition:transform .15s,box-shadow .15s;box-shadow:0 4px 20px rgba(31,56,100,0.35);margin-top:8px}
+.btn-start:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(31,56,100,0.4)}
+.btn-start:active{transform:translateY(0)}
+/* QUESTION CARD */
+.q-card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.q-counter-bar{background:linear-gradient(90deg,var(--navy) 0%,#2d4f8a 100%);padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.q-counter-nums{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.06em;color:var(--white);white-space:nowrap}
+.q-counter-nums span{color:var(--gold)}
+.q-counter-track{flex:1;height:6px;background:rgba(255,255,255,0.18);border-radius:99px;overflow:hidden}
+.q-counter-fill{height:100%;background:var(--gold);border-radius:99px;transition:width .5s cubic-bezier(.4,0,.2,1)}
+.q-pilar-tag{font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,0.55);white-space:nowrap}
+.q-body{padding:24px 24px 8px}
+.q-text{font-size:17px;font-weight:600;line-height:1.55;color:var(--navy);margin-bottom:20px}
+.opts{display:flex;flex-direction:column;gap:9px;padding:0 24px 24px}
+.opt-btn{display:flex;align-items:flex-start;gap:12px;padding:13px 16px;background:#f7f9ff;border:1.5px solid #dce3f0;border-radius:12px;cursor:pointer;text-align:left;font-family:'Outfit',sans-serif;font-size:14px;font-weight:500;color:var(--text);line-height:1.45;transition:background .15s,border-color .15s,transform .1s;width:100%}
+.opt-btn:hover:not(:disabled){background:#eef2ff;border-color:#7b93d4;transform:translateX(3px)}
+.opt-btn:disabled{cursor:default;transform:none !important}
+.opt-lbl{min-width:26px;height:26px;border-radius:50%;background:var(--white);border:1.5px solid #c8d0e8;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--navy);flex-shrink:0;margin-top:1px}
+.opt-btn.correct{background:var(--green-bg);border-color:#3a9464}
+.opt-btn.correct .opt-lbl{background:#2d7a4f;border-color:#2d7a4f;color:#fff}
+.opt-btn.wrong{background:var(--red-bg);border-color:#c04444}
+.opt-btn.wrong .opt-lbl{background:#b03030;border-color:#b03030;color:#fff}
+.feedback{margin:0 24px 20px;border-radius:12px;padding:13px 16px;font-size:14px;line-height:1.65;display:none;border-left:4px solid}
+.feedback.ok{display:block;background:var(--green-bg);border-color:#2d7a4f;color:#174d2e}
+.feedback.err{display:block;background:var(--red-bg);border-color:#b03030;color:#5a1010}
+.feedback strong{font-weight:600}
+.btn-next-wrap{padding:0 24px 24px}
+.btn-next{width:100%;padding:13px;background:linear-gradient(135deg,var(--navy),#2d4f8a);color:#fff;border:none;border-radius:12px;font-family:'Outfit',sans-serif;font-size:15px;font-weight:600;cursor:pointer;letter-spacing:.02em;transition:transform .15s,box-shadow .15s;box-shadow:0 4px 16px rgba(31,56,100,0.3);display:none}
+.btn-next:hover{transform:translateY(-2px)}
+/* RESULT */
+.result-card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);text-align:center}
+.result-hero{background:linear-gradient(135deg,var(--navy) 0%,#2d4f8a 100%);padding:36px 28px 28px;position:relative;overflow:hidden}
+.result-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(201,168,76,0.22) 0%,transparent 70%)}
+.result-emoji{font-size:48px;margin-bottom:10px;display:block;position:relative;z-index:1}
+.result-score{font-family:'Bebas Neue',sans-serif;font-size:72px;line-height:1;color:var(--gold);position:relative;z-index:1}
+.result-of{font-size:16px;color:rgba(255,255,255,0.6);position:relative;z-index:1;margin-top:2px}
+.result-pct{font-size:36px;font-weight:700;color:#fff;position:relative;z-index:1;margin-top:4px}
+.result-category{display:inline-block;margin-top:14px;background:var(--gold);color:var(--navy);font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:5px 18px;border-radius:99px;position:relative;z-index:1}
+.result-body{padding:24px 28px}
+.result-msg{font-size:15px;line-height:1.7;color:var(--text);margin-bottom:20px}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.r-stat{background:var(--off);border-radius:12px;padding:14px 12px;text-align:left}
+.r-stat-label{font-size:11px;color:var(--muted);font-weight:500;margin-bottom:4px}
+.r-stat-val{font-size:22px;font-weight:700}
+.result-note{font-size:12px;color:var(--muted);margin-bottom:16px;line-height:1.6}
+.btn-review-link{display:inline-block;padding:11px 24px;border:1.5px solid #d0d8ec;border-radius:10px;font-size:14px;color:var(--muted);font-weight:500;cursor:pointer;background:#fff;font-family:'Outfit',sans-serif;transition:background .15s}
+.btn-review-link:hover{background:var(--off)}
+/* ALREADY DONE */
+.done-card{background:var(--white);border-radius:var(--radius);padding:40px 28px;text-align:center;box-shadow:var(--shadow)}
+.done-icon{font-size:48px;margin-bottom:12px}
+.done-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:.04em;color:var(--navy);margin-bottom:8px}
+.done-sub{font-size:14px;color:var(--muted);line-height:1.65}
+.done-score{font-size:40px;font-weight:700;color:var(--gold);margin:10px 0 4px}
+/* REVIEW */
+.review-header{background:linear-gradient(90deg,var(--navy),#2d4f8a);border-radius:var(--radius);padding:16px 20px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.review-title{font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--white);letter-spacing:.04em}
+.review-sub{font-size:13px;color:rgba(255,255,255,0.55)}
+.btn-back{background:var(--gold);color:var(--navy);border:none;border-radius:10px;padding:9px 18px;font-size:13px;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif}
+.review-q-card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);margin-bottom:14px}
+/* FLOATERS */
+.floaters{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.floater{position:absolute;border-radius:50%;animation:floatAnim linear infinite;opacity:0}
+@keyframes floatAnim{0%{transform:translateY(100vh) rotate(0deg);opacity:0}5%{opacity:.6}90%{opacity:.4}100%{transform:translateY(-10vh) rotate(720deg);opacity:0}}
+</style>
+</head>
+<body>
+
+<div class="floaters" id="floaters"></div>
+
+<div class="page-wrap">
+
+  <div class="hero">
+    <div class="hero-eyebrow">🎁 Activación Interna · Soyoda 2026</div>
+    <h1 class="hero-title">TRIVIA<br><span>SOYODA</span><br>WINS</h1>
+    <p class="hero-sub">Demuestra cuánto conoces las marcas que hacen grande a Soyoda.<br>¡Responde, suma oportunidades y participa en el sorteo del Día del Padre!</p>
+    <div class="hero-badges">
+      <span class="badge">🏆 Premio Mayor · Kit Total Tools</span>
+      <span class="badge">📅 Sorteo 18 de junio</span>
+      <span class="badge">🎟 Trivia = +1 oportunidad extra</span>
+    </div>
+  </div>
+
+  <div class="card-shell">
+
+    <!-- PANTALLA 1: REGISTRO -->
+    <div class="screen active" id="screen-reg">
+      <div class="reg-card">
+        <h2>¡Empecemos! 🎉</h2>
+        <p>Ingresa tus datos para registrar tu participación. Solo se permite una respuesta por colaborador.</p>
+        </div>
+        <div class="field">
+          <label>Tu nombre completo</label>
+          <input type="text" id="inp-nombre" placeholder="Ej. Juan Pérez" autocomplete="name">
+        </div>
+        <div class="field">
+          <label>Tu área</label>
+          <select id="inp-area">
+            <option value="">— Selecciona tu área —</option>
+            <option>Ventas</option>
+            <option>Marketing</option>
+            <option>Bodega / Logística</option>
+            <option>Administración</option>
+            <option>Contabilidad / Finanzas</option>
+            <option>Recursos Humanos</option>
+            <option>Sistemas / TI</option>
+            <option>Gerencia</option>
+            <option>Otra</option>
+          </select>
+        </div>
+        <button class="btn-start" id="btn-start">Comenzar la trivia →</button>
+      </div>
+    </div>
+
+    <!-- PANTALLA 2: PREGUNTA -->
+    <div class="screen" id="screen-q">
+      <div class="q-card" id="q-card">
+        <div class="q-counter-bar">
+          <div class="q-counter-nums">PREGUNTA <span id="q-num">1</span> / 6</div>
+          <div class="q-counter-track">
+            <div class="q-counter-fill" id="q-fill" style="width:0%"></div>
+          </div>
+          <div class="q-pilar-tag" id="q-pilar">Brand Love</div>
+        </div>
+        <div class="q-body">
+          <div class="q-text" id="q-text"></div>
+        </div>
+        <div class="opts" id="q-opts"></div>
+        <div class="feedback" id="q-fb"></div>
+        <div class="btn-next-wrap">
+          <button class="btn-next" id="btn-next">Siguiente pregunta →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANTALLA 3: RESULTADO -->
+    <div class="screen" id="screen-result">
+      <div class="result-card">
+        <div class="result-hero">
+          <span class="result-emoji" id="r-emoji">🏆</span>
+          <div class="result-score" id="r-score">6</div>
+          <div class="result-of">de 6 respuestas correctas</div>
+          <div class="result-pct" id="r-pct">100%</div>
+          <span class="result-category" id="r-cat">Embajador Experto</span>
+        </div>
+        <div class="result-body">
+          <p class="result-msg" id="r-msg"></p>
+          <div class="result-grid">
+            <div class="r-stat">
+              <div class="r-stat-label">Correctas</div>
+              <div class="r-stat-val" id="r-ok" style="color:#2d7a4f">—</div>
+            </div>
+            <div class="r-stat">
+              <div class="r-stat-label">A repasar</div>
+              <div class="r-stat-val" id="r-err" style="color:#b03030">—</div>
+            </div>
+            <div class="r-stat">
+              <div class="r-stat-label">Puntaje</div>
+              <div class="r-stat-val" id="r-pct2" style="color:#1F3864">—</div>
+            </div>
+            <div class="r-stat">
+              <div class="r-stat-label">Boleto sorteo</div>
+              <div class="r-stat-val" style="color:#C9A84C">+1 🎟</div>
+            </div>
+          </div>
+          <p class="result-note">Tu participación quedó registrada. Solo se permite una respuesta por colaborador. ¡Buena suerte en el sorteo del 19 de junio!</p>
+          <button class="btn-review-link" id="btn-review">Ver repaso de mis respuestas</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANTALLA 4: REPASO -->
+    <div class="screen" id="screen-review">
+      <div class="review-header">
+        <div>
+          <div class="review-title">Repaso de respuestas</div>
+          <div class="review-sub" id="review-sub">— / 6 correctas</div>
+        </div>
+        <button class="btn-back" id="btn-back">← Volver a resultados</button>
+      </div>
+      <div id="review-questions"></div>
+    </div>
+
+    <!-- PANTALLA 5: YA PARTICIPÓ -->
+    <div class="screen" id="screen-done">
+      <div class="done-card">
+        <div class="done-icon">✅</div>
+        <div class="done-title">Ya participaste</div>
+        <div class="done-score" id="done-score">—</div>
+        <div class="done-sub">Solo se permite una participación por colaborador.<br>Tu boleto de sorteo ya está registrado.<br><strong>¡Buena suerte el 18 de junio!</strong></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ── CONFIG ─────────────────────────────────────────────────────
+var TEST_MODE = false; // cambiar a false para producción
+var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx4yPRv1wmepw6EakQ2LDlaAMgE0cGXG4N74Hjt5_JY9j2g8J7Ka09AD02aDZ9cbQPl/exec";
+var DONE_KEY = "soyoda_trivia_v4_done";
+
+// ── PREGUNTAS ──────────────────────────────────────────────────
+var QS = [
+  {
+    pilar: "Posicionamiento Forever",
+    text: "Forever es la marca de electrodomésticos que Soyoda representa con orgullo. ¿Cuál es su propuesta de valor?",
+    opts: ["Lujo en cada detalle", "Calidad real al alcance de todos", "Tecnología premium", "Diseño europeo"],
+    correct: 1,
+    ok: "Exactamente! Forever nació con una misión clara: llevar calidad real a todos los hogares ecuatorianos, sin que el precio sea una barrera. Esa es la promesa que Soyoda respalda con orgullo.",
+    err: [
+      "No es esa. La respuesta es <strong>Calidad real al alcance de todos</strong>. Forever no es lujo — es la marca que democratiza la calidad. Accesible, confiable y presente en miles de hogares del Ecuador.",
+      null,
+      "No es esa. La respuesta es <strong>Calidad real al alcance de todos</strong>. Forever no compite en tecnología premium — lleva calidad real a todos los hogares.",
+      "No acertaste. La respuesta es <strong>Calidad real al alcance de todos</strong>. Forever no es diseño importado — es la marca que Soyoda construyó para que todos puedan acceder a ella."
+    ]
+  },
+  {
+    pilar: "Brand Recognition — Decakila",
+    text: "¿Cuál es la marca enfocada en innovación, diseño y productos inalámbricos que Soyoda representa?",
+    opts: ["Decakila", "Forever", "White Pearl", "Todas"],
+    correct: 0,
+    ok: "Correcto! Decakila es la marca de Soyoda con mayor foco en diseño e innovación tecnológica — desde cepillos eléctricos hasta ventiladores de torre. Si tiene tecnología integrada, probablemente lleva la D.",
+    err: [
+      null,
+      "Incorrecto. La respuesta es <strong>Decakila</strong>. Forever es nuestra marca de electrodomésticos de valor, pero Decakila es la que lidera en innovación y tecnología inalámbrica.",
+      "No es White Pearl. La respuesta es <strong>Decakila</strong>. White Pearl es nuestra opción más asequible, mientras Decakila apunta a innovación y diseño moderno.",
+      "No todas — la respuesta es específicamente <strong>Decakila</strong>. Ella es la marca de Soyoda con ADN de innovación y tecnología."
+    ]
+  },
+  {
+    pilar: "Brand Recognition — White Pearl",
+    text: "¿Cuál es nuestra marca más asequible, que ofrece lo que necesitas al precio que te gusta?",
+    opts: ["Decakila", "Forever", "White Pearl", "Todas"],
+    correct: 2,
+    ok: "Muy bien! White Pearl es el flanker inteligente del portafolio Soyoda: accesibilidad con propósito. Cuando el presupuesto manda, White Pearl llega con la solución justa al precio justo.",
+    err: [
+      "No acertaste. La respuesta es <strong>White Pearl</strong>. Decakila apunta a innovación — White Pearl lleva la bandera de la accesibilidad en el portafolio.",
+      "No es Forever. La respuesta es <strong>White Pearl</strong>. Forever es nuestra marca de calidad accesible en electrodomésticos, pero White Pearl es el flanker de precio más competitivo.",
+      null,
+      "No todas — es específicamente <strong>White Pearl</strong>. Cada marca tiene su rol; White Pearl es la opción para quienes buscan el precio más amigable sin renunciar a funcionalidad."
+    ]
+  },
+  {
+    pilar: "Brand Love — Total Tools",
+    text: "Total Tools tiene un slogan que lo dice todo. ¿Cuál es?",
+    opts: ['"Construye más"', '"Toma el control"', '"Hecho para durar"', '"Potencia total"'],
+    correct: 1,
+    ok: "'Toma el control' — lo tienes claro! Ese slogan pone en manos del profesional la herramienta que le da poder sobre su trabajo. Y Soyoda es su representante exclusivo.",
+    err: [
+      "No es ese. El slogan de Total Tools es <strong>'Toma el control'</strong>. Tres palabras que lo dicen todo: el profesional, la herramienta, el resultado.",
+      null,
+      "Incorrecto. El slogan correcto es <strong>'Toma el control'</strong>. No habla de duración — habla de quién manda en el trabajo.",
+      "No acertaste. El slogan es <strong>'Toma el control'</strong>. El foco es el profesional que la usa, no la herramienta en sí."
+    ]
+  },
+  {
+    pilar: "Brand Love — Total Tools",
+    text: "Total Tools tiene una mascota icónica que representa fuerza y control. ¿Qué animal es?",
+    opts: ["Un toro", "Un rinoceronte", "Un gorila", "Un oso"],
+    correct: 2,
+    ok: "El gorila de Total Tools! Fuerza, control y presencia — todo en una mascota que refuerza el slogan 'Toma el control'. Ahora cuando lo veas, lo reconoces al instante.",
+    err: [
+      "No es un toro. La mascota de Total Tools es <strong>un gorila</strong> — símbolo de fuerza, dominio y control.",
+      "No es un rinoceronte. La mascota correcta es <strong>un gorila</strong>. Fuerza y control en manos del profesional.",
+      null,
+      "No es un oso. La respuesta es <strong>un gorila</strong>. El gorila de Total Tools es uno de los elementos más reconocibles del portafolio."
+    ]
+  },
+  {
+    pilar: "Posicionamiento Total vs Wadfow",
+    text: "¿Cuál es la diferencia clave entre Total Tools y Wadfow?",
+    opts: [
+      "Total es una marca local y Wadfow es a nivel global",
+      "Wadfow es más cara que Total Tools",
+      "Total está orientada a trabajos de mayor exigencia; Wadfow a proyectos funcionales y cotidianos",
+      "No existe diferencia real entre ambas"
+    ],
+    correct: 2,
+    ok: "Perfecto! Total para los trabajos que exigen más; Wadfow para los proyectos del día a día. Dos marcas, dos audiencias — y Soyoda las representa a ambas. Ese conocimiento te convierte en un embajador más completo.",
+    err: [
+      "Incorrecto. Las dos son marcas globales. La diferencia real es de propósito: <strong>Total para mayor exigencia y Wadfow para proyectos funcionales y cotidianos</strong>.",
+      "No es una diferencia de precio. La clave está en el uso: <strong>Total para mayor exigencia, Wadfow para lo funcional y cotidiano</strong>.",
+      null,
+      "Sí existe una diferencia importante. <strong>Total para mayor exigencia; Wadfow para proyectos funcionales y cotidianos.</strong> Conocerla te ayuda a hablar con propiedad de nuestras marcas."
+    ]
+  }
+];
+
+// ── STATE ──────────────────────────────────────────────────────
+var currentQ = 0;
+var answers = [];
+var nombre = "";
+var area = "";
+
+// ── INIT ───────────────────────────────────────────────────────
+window.onload = function() {
+  spawnFloaters();
+
+  document.getElementById("btn-start").addEventListener("click", startTrivia);
+  document.getElementById("btn-next").addEventListener("click", nextQuestion);
+  document.getElementById("btn-review").addEventListener("click", showReview);
+  document.getElementById("btn-back").addEventListener("click", function() {
+    showScreen("screen-result");
+  });
+};
+
+// ── FLOATERS ──────────────────────────────────────────────────
+function spawnFloaters() {
+  var wrap = document.getElementById("floaters");
+  var colors = ["rgba(201,168,76,.5)", "rgba(255,255,255,.2)", "rgba(45,122,79,.4)", "rgba(100,140,220,.3)"];
+  for (var i = 0; i < 22; i++) {
+    var el = document.createElement("div");
+    el.className = "floater";
+    var size = Math.random() * 12 + 6;
+    el.style.left = Math.random() * 100 + "%";
+    el.style.width = size + "px";
+    el.style.height = size + "px";
+    el.style.background = colors[Math.floor(Math.random() * colors.length)];
+    el.style.borderRadius = Math.random() > 0.5 ? "50%" : "3px";
+    el.style.animationDuration = (Math.random() * 12 + 8) + "s";
+    el.style.animationDelay = (Math.random() * 12) + "s";
+    wrap.appendChild(el);
+  }
+}
+
+// ── SHOW SCREEN ────────────────────────────────────────────────
+function showScreen(id) {
+  var screens = document.querySelectorAll(".screen");
+  for (var i = 0; i < screens.length; i++) {
+    screens[i].classList.remove("active");
+  }
+  document.getElementById(id).classList.add("active");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+// ── REGISTRO ──────────────────────────────────────────────────
+function startTrivia() {
+  nombre = document.getElementById("inp-nombre").value.trim();
+  area = document.getElementById("inp-area").value;
+
+  if (!nombre) { alert("Por favor ingresa tu nombre completo."); return; }
+  if (!area) { alert("Por favor selecciona tu área."); return; }
+
+  if (!TEST_MODE && localStorage.getItem(DONE_KEY)) {
+    var saved = JSON.parse(localStorage.getItem(DONE_KEY));
+    document.getElementById("done-score").textContent =
+      (saved.correct || "?") + "/6 correctas · " + (saved.pct || "?") + "%";
+    showScreen("screen-done");
+    return;
+  }
+
+  // Reset
+  currentQ = 0;
+  answers = [];
+  for (var i = 0; i < QS.length; i++) answers.push(null);
+
+  renderQuestion();
+  showScreen("screen-q");
+}
+
+// ── RENDER QUESTION ────────────────────────────────────────────
+function renderQuestion() {
+  var q = QS[currentQ];
+  var pct = Math.round((currentQ / QS.length) * 100);
+
+  document.getElementById("q-num").textContent = currentQ + 1;
+  document.getElementById("q-fill").style.width = pct + "%";
+  document.getElementById("q-pilar").textContent = q.pilar;
+  document.getElementById("q-text").textContent = q.text;
+
+  var fb = document.getElementById("q-fb");
+  fb.className = "feedback";
+  fb.innerHTML = "";
+
+  var btnNext = document.getElementById("btn-next");
+  btnNext.style.display = "none";
+  btnNext.textContent = currentQ < QS.length - 1 ? "Siguiente pregunta →" : "Ver mis resultados 🏆";
+
+  var optsEl = document.getElementById("q-opts");
+  optsEl.innerHTML = "";
+  for (var i = 0; i < q.opts.length; i++) {
+    var btn = document.createElement("button");
+    btn.className = "opt-btn";
+    btn.setAttribute("data-idx", i);
+    var lbl = document.createElement("span");
+    lbl.className = "opt-lbl";
+    lbl.textContent = String.fromCharCode(65 + i);
+    var txt = document.createElement("span");
+    txt.textContent = q.opts[i];
+    btn.appendChild(lbl);
+    btn.appendChild(txt);
+    btn.addEventListener("click", makePickHandler(i));
+    optsEl.appendChild(btn);
+  }
+}
+
+function makePickHandler(idx) {
+  return function() { pickAnswer(idx); };
+}
+
+// ── PICK ANSWER ────────────────────────────────────────────────
+function pickAnswer(oi) {
+  if (answers[currentQ] !== null) return;
+  answers[currentQ] = oi;
+
+  var q = QS[currentQ];
+  var isOk = oi === q.correct;
+
+  var optBtns = document.getElementById("q-opts").querySelectorAll(".opt-btn");
+  for (var j = 0; j < optBtns.length; j++) {
+    optBtns[j].disabled = true;
+    if (j === q.correct) optBtns[j].classList.add("correct");
+    if (j === oi && !isOk) optBtns[j].classList.add("wrong");
+  }
+
+  var fb = document.getElementById("q-fb");
+  if (isOk) {
+    fb.className = "feedback ok";
+    fb.innerHTML = "<strong>¡Muy bien!</strong> " + q.ok;
+  } else {
+    var errMsg = (Array.isArray(q.err) ? q.err[oi] : q.err) || q.err[0] ||
+      "La respuesta correcta es <strong>" + q.opts[q.correct] + "</strong>.";
+    fb.className = "feedback err";
+    fb.innerHTML = errMsg;
+  }
+
+  document.getElementById("btn-next").style.display = "block";
+}
+
+// ── NEXT ───────────────────────────────────────────────────────
+function nextQuestion() {
+  if (currentQ < QS.length - 1) {
+    currentQ++;
+    renderQuestion();
+    document.getElementById("q-card").scrollIntoView({ behavior: "smooth", block: "start" });
+  } else {
+    showResult();
+  }
+}
+
+// ── RESULT ────────────────────────────────────────────────────
+function showResult() {
+  var correct = 0;
+  for (var i = 0; i < answers.length; i++) {
+    if (answers[i] === QS[i].correct) correct++;
+  }
+  var pct = Math.round((correct / QS.length) * 100);
+
+  var cats = [
+    { min: 6, cat: "Embajador Experto 🏆", emoji: "🏆",
+      msg: "eres exactamente el embajador que Soyoda necesita. Conoces nuestras marcas desde adentro, y eso se nota cada vez que las recomiendas con confianza — seas del área que seas. Gracias por ser parte de este equipo." },
+    { min: 5, cat: "Gran conocedor 🌟", emoji: "🌟",
+      msg: "excelente resultado! Conoces bien el portafolio. Con lo que aprendiste hoy, puedes hablar de nuestras marcas con propiedad — en el trabajo, en casa o donde alguien pregunte. Los mejores fans de Soyoda somos nosotros mismos." },
+    { min: 4, cat: "Buena base 👍", emoji: "👍",
+      msg: "buen puntaje! Tienes una base sólida. Repasa las respuestas que fallaste — cada detalle que aprendes sobre nuestras marcas te hace un mejor embajador de Soyoda en tu entorno." },
+    { min: 0, cat: "En aprendizaje 💡", emoji: "💡",
+      msg: "gracias por participar! Ahora que conoces mejor nuestras marcas, ya eres parte de quienes las hacen crecer. No hacen falta tarjetas de presentación para ser embajador — basta con creer en lo que hacemos y recomendarlo con orgullo." }
+  ];
+
+  var cat = cats[cats.length - 1];
+  for (var i = 0; i < cats.length; i++) {
+    if (correct >= cats[i].min) { cat = cats[i]; break; }
+  }
+
+  document.getElementById("r-emoji").textContent = cat.emoji;
+  document.getElementById("r-score").textContent = correct;
+  document.getElementById("r-pct").textContent = pct + "%";
+  document.getElementById("r-cat").textContent = cat.cat;
+  document.getElementById("r-msg").innerHTML = "<strong>" + nombre + "</strong>, " + cat.msg;
+  document.getElementById("r-ok").textContent = correct;
+  document.getElementById("r-err").textContent = QS.length - correct;
+  document.getElementById("r-pct2").textContent = pct + "%";
+
+  showScreen("screen-result");
+  sendToSheets(correct, pct);
+
+  if (!TEST_MODE) {
+    localStorage.setItem(DONE_KEY, JSON.stringify({
+      correct: correct, pct: pct, nombre: nombre, area: area,
+      ts: new Date().toISOString()
+    }));
+  }
+}
+
+// ── SEND TO SHEETS ─────────────────────────────────────────────
+function sendToSheets(correct, pct) {
+  if (TEST_MODE) {
+    console.log("[MODO PRUEBA] Datos que se enviarían:", { nombre: nombre, area: area, answers: answers, correct: correct, pct: pct });
+    return;
+  }
+  if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.indexOf("https://script.google.com/macros/s/AKfycbx4yPRv1wmepw6EakQ2LDlaAMgE0cGXG4N74Hjt5_JY9j2g8J7Ka09AD02aDZ9cbQPl/exec") > -1) return;
+  fetch(APPS_SCRIPT_URL, {
+    method: "POST",
+    body: JSON.stringify({ nombre: nombre, area: area, answers: answers, correct: correct, pct: pct })
+  }).catch(function() {});
+}
+
+// ── REVIEW ────────────────────────────────────────────────────
+function showReview() {
+  var correct = 0;
+  for (var i = 0; i < answers.length; i++) {
+    if (answers[i] === QS[i].correct) correct++;
+  }
+  document.getElementById("review-sub").textContent = nombre + " · " + correct + "/6 correctas";
+
+  var container = document.getElementById("review-questions");
+  container.innerHTML = "";
+
+  for (var qi = 0; qi < QS.length; qi++) {
+    var q = QS[qi];
+    var oi = answers[qi];
+    var isOk = oi === q.correct;
+
+    // Card wrapper
+    var card = document.createElement("div");
+    card.className = "review-q-card";
+
+    // Counter bar
+    var bar = document.createElement("div");
+    bar.className = "q-counter-bar";
+    bar.innerHTML =
+      '<div class="q-counter-nums">PREGUNTA <span>' + (qi + 1) + '</span> / ' + QS.length + '</div>' +
+      '<div class="q-counter-track"><div class="q-counter-fill" style="width:' + Math.round(((qi + 1) / QS.length) * 100) + '%"></div></div>' +
+      '<div class="q-pilar-tag">' + (isOk ? "✅ Correcta" : "❌ Incorrecta") + '</div>';
+    card.appendChild(bar);
+
+    // Question text
+    var body = document.createElement("div");
+    body.className = "q-body";
+    body.innerHTML = '<div class="q-text">' + q.text + '</div>';
+    card.appendChild(body);
+
+    // Options
+    var optsDiv = document.createElement("div");
+    optsDiv.className = "opts";
+    for (var j = 0; j < q.opts.length; j++) {
+      var btn = document.createElement("button");
+      btn.className = "opt-btn";
+      btn.disabled = true;
+      if (j === q.correct) btn.classList.add("correct");
+      if (j === oi && !isOk) btn.classList.add("wrong");
+
+      var lbl = document.createElement("span");
+      lbl.className = "opt-lbl";
+      if (j === q.correct) {
+        lbl.style.background = "#2d7a4f";
+        lbl.style.borderColor = "#2d7a4f";
+        lbl.style.color = "#fff";
+      } else if (j === oi && !isOk) {
+        lbl.style.background = "#b03030";
+        lbl.style.borderColor = "#b03030";
+        lbl.style.color = "#fff";
+      }
+      lbl.textContent = String.fromCharCode(65 + j);
+
+      var optTxt = document.createElement("span");
+      optTxt.textContent = q.opts[j];
+
+      btn.appendChild(lbl);
+      btn.appendChild(optTxt);
+      optsDiv.appendChild(btn);
+    }
+    card.appendChild(optsDiv);
+
+    // Feedback
+    var fbText = isOk
+      ? "<strong>¡Muy bien!</strong> " + q.ok
+      : ((Array.isArray(q.err) ? q.err[oi] : q.err) || q.err[0] || "Respuesta incorrecta.");
+    var fbDiv = document.createElement("div");
+    fbDiv.className = isOk ? "feedback ok" : "feedback err";
+    fbDiv.style.display = "block";
+    fbDiv.innerHTML = fbText;
+    card.appendChild(fbDiv);
+
+    container.appendChild(card);
+  }
+
+  showScreen("screen-review");
+}
+</script>
+</body>
+</html>
