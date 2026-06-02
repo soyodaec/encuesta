@@ -46,7 +46,6 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .reg-card{background:var(--white);border-radius:var(--radius);padding:32px 28px;box-shadow:var(--shadow)}
 .reg-card h2{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.04em;color:var(--navy);margin-bottom:6px}
 .reg-card p{font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.6}
-.test-banner{background:#fff8e1;border:1.5px solid #f0c040;border-radius:10px;padding:10px 14px;margin-bottom:14px;font-size:13px;color:#7a5800;display:flex;align-items:flex-start;gap:8px;line-height:1.5}
 .field{margin-bottom:18px}
 .field label{display:block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);margin-bottom:7px}
 .field input,.field select{width:100%;padding:12px 16px;border:1.5px solid #d4dae8;border-radius:10px;font-size:15px;font-family:'Outfit',sans-serif;color:var(--text);background:#fff;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
@@ -87,112 +86,7 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .result-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(201,168,76,0.22) 0%,transparent 70%)}
 .result-emoji{font-size:48px;margin-bottom:10px;display:block;position:relative;z-index:1}
 .result-score{font-family:'Bebas Neue',sans-serif;font-size:72px;line-height:1;color:var(--gold);position:relative;z-index:1}
-.result-of{font-size:16px;color:rgba(255,255,255,0.6);position:relative;z-index:1;margin-top:2px}
-.result-pct{font-size:36px;font-weight:700;color:#fff;position:relative;z-index:1;margin-top:4px}
-.result-category{display:inline-block;margin-top:14px;background:var(--gold);color:var(--navy);font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:5px 18px;border-radius:99px;position:relative;z-index:1}
-.result-body{padding:24px 28px}
-.result-msg{font-size:15px;line-height:1.7;color:var(--text);margin-bottom:20px}
-.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
-.r-stat{background:var(--off);border-radius:12px;padding:14px 12px;text-align:left}
-.r-stat-label{font-size:11px;color:var(--muted);font-weight:500;margin-bottom:4px}
-.r-stat-val{font-size:22px;font-weight:700}
-.result-note{font-size:12px;color:var(--muted);margin-bottom:16px;line-height:1.6}
-.btn-review-link{display:inline-block;padding:11px 24px;border:1.5px solid #d0d8ec;border-radius:10px;font-size:14px;color:var(--muted);font-weight:500;cursor:pointer;background:#fff;font-family:'Outfit',sans-serif;transition:background .15s}
-.btn-review-link:hover{background:var(--off)}
-/* ALREADY DONE */
-.done-card{background:var(--white);border-radius:var(--radius);padding:40px 28px;text-align:center;box-shadow:var(--shadow)}
-.done-icon{font-size:48px;margin-bottom:12px}
-.done-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:.04em;color:var(--navy);margin-bottom:8px}
-.done-sub{font-size:14px;color:var(--muted);line-height:1.65}
-.done-score{font-size:40px;font-weight:700;color:var(--gold);margin:10px 0 4px}
-/* REVIEW */
-.review-header{background:linear-gradient(90deg,var(--navy),#2d4f8a);border-radius:var(--radius);padding:16px 20px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.review-title{font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--white);letter-spacing:.04em}
-.review-sub{font-size:13px;color:rgba(255,255,255,0.55)}
-.btn-back{background:var(--gold);color:var(--navy);border:none;border-radius:10px;padding:9px 18px;font-size:13px;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif}
-.review-q-card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);margin-bottom:14px}
-/* FLOATERS */
-.floaters{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
-.floater{position:absolute;border-radius:50%;animation:floatAnim linear infinite;opacity:0}
-@keyframes floatAnim{0%{transform:translateY(100vh) rotate(0deg);opacity:0}5%{opacity:.6}90%{opacity:.4}100%{transform:translateY(-10vh) rotate(720deg);opacity:0}}
-</style>
-</head>
-<body>
-
-<div class="floaters" id="floaters"></div>
-
-<div class="page-wrap">
-
-  <div class="hero">
-    <div class="hero-eyebrow">🎁 Activación Interna · Soyoda 2026</div>
-    <h1 class="hero-title">TRIVIA<br><span>SOYODA</span><br>WINS</h1>
-    <p class="hero-sub">Demuestra cuánto conoces las marcas que hacen grande a Soyoda.<br>¡Responde, suma oportunidades y participa en el sorteo del Día del Padre!</p>
-    <div class="hero-badges">
-      <span class="badge">🏆 Premio Mayor · Kit Total Tools</span>
-      <span class="badge">📅 Sorteo 18 de junio</span>
-      <span class="badge">🎟 Trivia = +1 oportunidad extra</span>
-    </div>
-  </div>
-
-  <div class="card-shell">
-
-    <!-- PANTALLA 1: REGISTRO -->
-    <div class="screen active" id="screen-reg">
-      <div class="reg-card">
-        <h2>¡Empecemos! 🎉</h2>
-        <p>Ingresa tus datos para registrar tu participación. Solo se permite una respuesta por colaborador.</p>
-        </div>
-        <div class="field">
-          <label>Tu nombre completo</label>
-          <input type="text" id="inp-nombre" placeholder="Ej. Juan Pérez" autocomplete="name">
-        </div>
-        <div class="field">
-          <label>Tu área</label>
-          <select id="inp-area">
-            <option value="">— Selecciona tu área —</option>
-            <option>Ventas</option>
-            <option>Marketing</option>
-            <option>Bodega / Logística</option>
-            <option>Administración</option>
-            <option>Contabilidad / Finanzas</option>
-            <option>Recursos Humanos</option>
-            <option>Sistemas / TI</option>
-            <option>Gerencia</option>
-            <option>Otra</option>
-          </select>
-        </div>
-        <button class="btn-start" id="btn-start">Comenzar la trivia →</button>
-      </div>
-    </div>
-
-    <!-- PANTALLA 2: PREGUNTA -->
-    <div class="screen" id="screen-q">
-      <div class="q-card" id="q-card">
-        <div class="q-counter-bar">
-          <div class="q-counter-nums">PREGUNTA <span id="q-num">1</span> / 6</div>
-          <div class="q-counter-track">
-            <div class="q-counter-fill" id="q-fill" style="width:0%"></div>
-          </div>
-          <div class="q-pilar-tag" id="q-pilar">Brand Love</div>
-        </div>
-        <div class="q-body">
-          <div class="q-text" id="q-text"></div>
-        </div>
-        <div class="opts" id="q-opts"></div>
-        <div class="feedback" id="q-fb"></div>
-        <div class="btn-next-wrap">
-          <button class="btn-next" id="btn-next">Siguiente pregunta →</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- PANTALLA 3: RESULTADO -->
-    <div class="screen" id="screen-result">
-      <div class="result-card">
-        <div class="result-hero">
-          <span class="result-emoji" id="r-emoji">🏆</span>
-          <div class="result-score" id="r-score">6</div>
-          <div class="result-of">de 6 respuestas correctas</div>
+.result-of">de 6 respuestas correctas</div>
           <div class="result-pct" id="r-pct">100%</div>
           <span class="result-category" id="r-cat">Embajador Experto</span>
         </div>
@@ -222,7 +116,6 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
       </div>
     </div>
 
-    <!-- PANTALLA 4: REPASO -->
     <div class="screen" id="screen-review">
       <div class="review-header">
         <div>
@@ -234,7 +127,6 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
       <div id="review-questions"></div>
     </div>
 
-    <!-- PANTALLA 5: YA PARTICIPÓ -->
     <div class="screen" id="screen-done">
       <div class="done-card">
         <div class="done-icon">✅</div>
@@ -249,8 +141,8 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 
 <script>
 // ── CONFIG ─────────────────────────────────────────────────────
-var TEST_MODE = false; // cambiar a false para producción
-var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx4yPRv1wmepw6EakQ2LDlaAMgE0cGXG4N74Hjt5_JY9j2g8J7Ka09AD02aDZ9cbQPl/exec";
+var TEST_MODE = false; // cambiar a true solo para desarrollo/pruebas locales
+var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyo_ZhjcwRaTo8JWuM3VFBgEyuMz0HwbELd7uEGZ3qM8OYK0f44XJ9jMnnXweme9PoB/exec";
 var DONE_KEY = "soyoda_trivia_v4_done";
 
 // ── PREGUNTAS ──────────────────────────────────────────────────
@@ -542,11 +434,22 @@ function sendToSheets(correct, pct) {
     console.log("[MODO PRUEBA] Datos que se enviarían:", { nombre: nombre, area: area, answers: answers, correct: correct, pct: pct });
     return;
   }
-  if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.indexOf("https://script.google.com/macros/s/AKfycbx4yPRv1wmepw6EakQ2LDlaAMgE0cGXG4N74Hjt5_JY9j2g8J7Ka09AD02aDZ9cbQPl/exec") > -1) return;
+  
+  // Realizar el envío de datos directamente a la URL de producción configurada
   fetch(APPS_SCRIPT_URL, {
     method: "POST",
+    mode: "no-cors", // Evita problemas de CORS al cruzar dominios entre GitHub y Google
+    headers: {
+      "Content-Type": "application/json"
+    },
     body: JSON.stringify({ nombre: nombre, area: area, answers: answers, correct: correct, pct: pct })
-  }).catch(function() {});
+  })
+  .then(function() {
+    console.log("Datos enviados correctamente.");
+  })
+  .catch(function(err) {
+    console.error("Error al enviar los datos a Google Sheets:", err);
+  });
 }
 
 // ── REVIEW ────────────────────────────────────────────────────
